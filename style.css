@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #111;
+}
+
+ul{
+    list-style-type: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.barra-nome{
+    padding: 10px 150px;
+    background: #1111;
+    width: 100vw;
+}
+
+.navegacao{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-bottom: solid #111 1px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.barra-pesquisa{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formulario-pesquisa{
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa{
+    width: 40vw;
+    height: 30px;
+    border: solid .5px #111;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-indent: 15px;
+}
+
+.btn-pesquisa{
+    height: 30px;
+    width: 150px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+    font-size: 1rem;
+}
+
+.btn-pesquisa:hover{
+    cursor: pointer;
+    background-color: #1111;
+}
+
+.usuario{
+    display: flex;
+    gap: 30px;
+}
+
+.categorias ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.categorias a{
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    font-size: 1.2rem;
+}
+
+.categorias a:hover{
+    background-color: #1111;
+    cursor: pointer;
+}
+
+
+main{
+    text-align: center;
+}
+
+.destaque{
+    padding-bottom: 15px;
+}
+
+.mosaico{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.img-mosaico{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.img-1{
+    width: 300px;
+    height: 500px;
+    background-image: url(img/pexels-godisable-jacob-794062.jpg);
+}
+
+.img-2{
+    width: 500px;
+    height: 500px;
+    background-image: url(img/pexels-chloe-1043474.jpg);    
+}
+
+.img-3{
+    width: 500px;
+    height: 500px;
+    background-image: url(img/pexels-ray-piedra-1456733\(1\).jpg); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.txt-mosaico{
+    display: none;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+/* .img-mosaico:hover > .txt-mosaico{
+    display: block;
+    
+    background-color: #1111;
+    transition: 1s ease-in-out;
+    height: 30%;
+} */
