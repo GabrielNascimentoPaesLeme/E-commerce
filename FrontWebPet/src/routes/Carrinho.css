@@ -1,0 +1,133 @@
+.cart-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.item-cart {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.descriptionCart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.descriptionCart img{
+  width: 20vw;
+  height: 20vw;
+}
+
+.descriptionCart div h4{
+  font-size: 1rem;
+}
+
+.descriptionCart div h6{
+  font-size: .8rem;
+}
+
+.quantidade-itens {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantidade-itens p{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+  background: #e0e0e0;
+}
+
+.cart-summary {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+  background: #45a049;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.empty-cart button {
+  padding: 12px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.empty-cart button:hover {
+  background: #0056b3;
+}
+
+@media screen and (min-width: 768px) {
+  .descriptionCart {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .quantidade-itens {
+    width: 100%;
+    justify-content: center;
+  }
+}

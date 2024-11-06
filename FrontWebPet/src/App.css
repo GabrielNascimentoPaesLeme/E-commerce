@@ -1,0 +1,7 @@
+body{
+  height: 100%;
+  background-image: url('./assets/backgorundSmoke.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,134 @@
+.navbar.bg-body-tertiary{
+  background-color: rgba(114, 90, 12, 0.356) !important;
+  color: blanchedalmond;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.burgerUser {
+  display: flex;
+  align-items: center;
+  /* width: 50px;
+  height: 50px; */
+}
+
+.burgerUser button{
+  padding: 2px 5px;
+}
+
+.burgerUser button span{
+  font-size: 1.2rem;
+  
+}
+
+.links-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.link-cart {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: white;
+}
+
+.container-fluid {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.container-fluid h2 {
+  padding: 0;
+  opacity: 1;
+}
+
+.d-flex {
+  width: 90%;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar-nav.me-auto.mb-2.mb-lg-0 {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0 !important;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.navbar-nav .dropdown-menu.show {
+  display: flex;
+  padding: 0 !important;
+}
+
+.offcanvas-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px !important;
+}
+
+.endereco{
+  flex-direction: column;
+  display: flex;  
+  justify-content: center;
+}
+
+.endereco h6{
+  text-align: center;
+}
+
+.info-endereco{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-login a{
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.buscadorCep{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.complement{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.complement div{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.editAdress{
+  margin-top: 15px;
+}
+
+.complement div input{
+  width: 40%;
+}
+
+
+.contact{
+  padding: 10px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

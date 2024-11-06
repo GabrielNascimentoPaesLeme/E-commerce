@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "X-Burguer Clássico",
+      "price": 25.9,
+      "description": "Hambúrguer artesanal, queijo cheddar, alface, tomate e molho especial",
+      "qtd": 40
+    },
+    {
+      "id": "2",
+      "name": "Cheeseburger Clássico",
+      "price": 22.9,
+      "description": "Pão de hambúrguer, hambúrguer de carne bovina, queijo cheddar, alface, tomate, cebola roxa, picles, ketchup e mostarda.",
+      "qtd": 40
+    },
+    {
+      "id": "3",
+      "name": "Chicken Burger Crispy",
+      "price": 23.9,
+      "description": "Pão integral, filé de frango empanado, queijo prato, alface, tomate e maionese de ervas.",
+      "qtd": 40
+    },
+    {
+      "id": "4",
+      "name": "Mushroom Swiss",
+      "price": 29.9,
+      "description": "Pão de brioche, hambúrguer de carne bovina, queijo suíço, cogumelos salteados, cebola caramelizada e molho de alho.",
+      "qtd": 40
+    },
+    {
+      "id": "5",
+      "name": "Burguer de Salmão",
+      "price": 32.9,
+      "description": " Pão de ciabatta, hambúrguer de salmão, rúcula, abacate e molho tártaro.",
+      "qtd": 40
+    },
+    {
+      "id": "6",
+      "name": "Double Cheddar Onion",
+      "price": 30.9,
+      "description": "Pão de hambúrguer, hambúrguer duplo de carne bovina, queijo cheddar duplo, cebola crispy, picles e molho de queijo.",
+      "qtd": 40
+    }
+  ]
+}
