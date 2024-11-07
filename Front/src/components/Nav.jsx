@@ -30,8 +30,6 @@ const Nav = () => {
     navigate('/Carrinho');
   };
 
-
-
   const handleHome = () => {
     navigate('/');
   };

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Certifique-se de que o Husky está passando o arquivo de mensagem de commit
+COMMIT_MSG_FILE=$(git rev-parse --git-dir)/COMMIT_EDITMSG
+
+# Verifica se o arquivo de commit foi encontrado
+if [ ! -f "$COMMIT_MSG_FILE" ]; then
+  echo "Erro: Arquivo de mensagem de commit não encontrado."
+  exit 1
+fi
+
+# Passa o arquivo de commit para o script generate-commit-message.sh
+. "$(dirname "$0")/../generate-commit-message.sh" "$COMMIT_MSG_FILE"

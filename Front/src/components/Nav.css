@@ -70,6 +70,23 @@
   padding: 0 !important;
 }
 
+.offcanvas{
+  background-image: url('../assets/backgorundSmoke.jpg');
+  background-position: center;
+}
+
+.offcanvas-title p{
+  margin-bottom: 0;
+}
+
+.offcanvas-header button{
+  background-color: blanchedalmond;
+}
+
+.offcanvas.show{
+  color: blanchedalmond;
+}
+
 .offcanvas-body{
   display: flex;
   flex-direction: column;
@@ -77,10 +94,21 @@
   padding: 5px !important;
 }
 
+
+
+.container-buscador, .info-endereco{
+  margin: 10px;
+  padding: 5px;
+  background-color: rgba(226, 152, 40, 0.623);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
 .endereco{
   flex-direction: column;
   display: flex;  
   justify-content: center;
+  
 }
 
 .endereco h6{
@@ -132,3 +160,4 @@
   flex-direction: column;
   gap: 10px;
 }
+

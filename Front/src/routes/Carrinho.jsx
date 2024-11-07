@@ -19,6 +19,10 @@ const Carrinho = () => {
     calculateTotal,
   } = useCartLogic(cart);
 
+  const handleCkeckOut = () => {
+    navigate('/Checkout');
+  };
+
   if (cart.length < 1) {
     return <EmptyCart onNavigateHome={() => navigate('/')} />;
   }
@@ -41,9 +45,9 @@ const Carrinho = () => {
         <h1>Total: R$ {calculateTotal().toFixed(2)}</h1>
         <button 
           className="checkout-btn"
-          onClick={() => {/* Implementar finalização */}}
+          onClick={handleCkeckOut}
         >
-          Finalizar
+          Checkout
         </button>
       </div>
     </div>

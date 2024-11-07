@@ -1,36 +1,71 @@
 import { buscaEndereco } from '../services/cep';
 import { useState } from 'react';
 
-
-
-
-const BuscarCep = ({endereco, setEndereco}) => {
+const BuscarCep = ({ endereco, setEndereco }) => {
   const [erro, setErro] = useState('');
   const [cep, setCep] = useState('');
-  
+
   const [nmrCasa, setNmrCasa] = useState('');
   const [complement, setComplement] = useState('');
   const [rua, setRua] = useState('');
-  
+  const [completAdress, setCompleteAdress] = useState({
+    logradouro: '',
+    complemento: '',
+    number: '',
+    localidade: '',
+    uf: '',
+  });
+  const storageCompleteAdress = JSON.parse(
+    localStorage.getItem('completeAdress')
+  );
+  console.log(storageCompleteAdress);
+
   const handleNumberHome = (e) => {
     setNmrCasa(e.target.value);
+    setCompleteAdress({
+      ...completAdress,
+      number: e.target.value,
+    });
   };
-  
+
   const handleComplement = (e) => {
     setComplement(e.target.value);
+    setCompleteAdress({
+      ...completAdress,
+      complemento: e.target.value,
+    });
   };
-  
+
   const handleRua = (e) => {
     setRua(e.target.value);
+    setCompleteAdress({
+      ...completAdress,
+      logradouro: e.target.value,
+    });
+    console.log(rua);
   };
-  
+
   const handleCepChange = (e) => {
     setCep(e.target.value);
   };
+
+  const handleCompleteAdress = (e) => {
+    e.preventDefault();
+    console.log(completAdress);
+    localStorage.setItem('completeAdress', JSON.stringify(completAdress));
+  };
+
   const buscarCep = async () => {
     try {
       const enderecoData = await buscaEndereco(cep);
       setEndereco(enderecoData);
+      setCompleteAdress({
+        ...completAdress,
+        logradouro: enderecoData.logradouro,
+        localidade: enderecoData.localidade,
+        uf: enderecoData.uf,
+      });
+      localStorage.setItem('completeAdress', JSON.stringify(completAdress));
       setErro(''); // Limpa qualquer erro anterior
     } catch (error) {
       setEndereco(null);
@@ -40,18 +75,19 @@ const BuscarCep = ({endereco, setEndereco}) => {
   return (
     <div>
       <address className="endereco">
-        {endereco && (
+        {storageCompleteAdress && (
           <div className="info-endereco">
             <h6>Endereço atual</h6>
             <div>
               <p>
-                {endereco.localidade}/{endereco.uf}
+                {storageCompleteAdress.localidade}/{storageCompleteAdress.uf}
               </p>
-              {endereco.logradouro ? (
+              {storageCompleteAdress.logradouro ? (
                 <div>
-                  <p>{endereco.logradouro}</p>
+                  <p>Rua/Av.: {storageCompleteAdress.logradouro}</p>
                   <p>
-                    Nmr./Complemento: {nmrCasa}/{complement}
+                    Nmr./Complemento: {storageCompleteAdress.number}/
+                    {storageCompleteAdress.complemento}
                   </p>
                 </div>
               ) : (
@@ -78,25 +114,29 @@ const BuscarCep = ({endereco, setEndereco}) => {
               <i className="bi bi-search"></i>
             </button>
           </div>
-        </div>
+          <form
+            onSubmit={(e) => handleCompleteAdress(e)}
+            className="complement"
+          >
+            <div>
+              <label htmlFor="rua">Rua:</label>
+              <input id="rua" type="text" onChange={handleRua} />
+            </div>
 
-        <div className="complement">
-          <div>
-            <label htmlFor="rua">Rua:</label>
-            <input id="rua" type="text" onChange={handleRua} />
-          </div>
+            <div>
+              <label htmlFor="numero">Número: </label>
+              <input id="numero" type="text" onChange={handleNumberHome} />
+            </div>
 
-          <div>
-            <label htmlFor="numero">Número: </label>
-            <input id="numero" type="text" onChange={handleNumberHome} />
-          </div>
+            <div>
+              <label htmlFor="complemento">Complemento:</label>
+              <input id="complemento" type="text" onChange={handleComplement} />
+            </div>
 
-          <div>
-            <label htmlFor="complemento">Complemento:</label>
-            <input id="complemento" type="text" onChange={handleComplement} />
-          </div>
-
-          <button className="editAdress">Atualizar endereço</button>
+            <button type="submit" className="editAdress">
+              Atualizar endereço
+            </button>
+          </form>
         </div>
       </address>
     </div>

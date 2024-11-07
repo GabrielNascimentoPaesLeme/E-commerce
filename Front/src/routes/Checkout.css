@@ -1,0 +1,29 @@
+.container-checkout{
+  min-height: 90vh;
+  color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-item{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 10px;
+  margin-bottom: 0;
+  align-items: center;
+  background-color: rgb(17, 17, 37);
+}
+
+.list-item li{
+  list-style: none;
+}
+
+.info-item{
+  display: flex;
+  justify-content: space-evenly;
+  width: 45%;
+}

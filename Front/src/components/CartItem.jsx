@@ -8,8 +8,6 @@ const CartItem = ({ item, quantidade, onAdd, onRemove }) => {
           <h6>R$ {(item.price * quantidade).toFixed(2)}</h6>
         </div>
       </div>
-      {/* <div className="descriptionCart">
-      </div> */}
       <div className="quantidade-itens">
         <button onClick={onRemove} className="quantity-btn">
         {quantidade !== 1 ? '-': <i class="bi bi-x"></i>}
