@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ContextApp } from '../context/ContextApp'
 import { useCartLogic } from '../hooks/useCartLogic';
 import CheckItem from '../components/CheckItem';
+import BuscarCep from '../components/BuscarCep'
 import './Checkout.css'
 
 
@@ -25,6 +26,8 @@ const Checkout = () => {
           />
         ))}
       </div>
+
+      <BuscarCep/>
 
       <div className="cart-summary summary-check">
         <h1>Total: R$ {calculateTotal().toFixed(2)}</h1>

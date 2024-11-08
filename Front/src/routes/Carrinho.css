@@ -124,14 +124,14 @@
   background: #0056b3;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .descriptionCart {
     flex-direction: column;
     align-items: flex-start;
   }
   
   .quantidade-itens {
-    width: 100%;
-    justify-content: center;
+    width: 50%;
+    justify-content: space-evenly;
   }
 }

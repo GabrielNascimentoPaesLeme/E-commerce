@@ -1,5 +1,5 @@
 body{
-  height: 100%;
+  min-height: 100vh;
   background-image: url('./assets/backgorundSmoke.jpg');
   background-position: center;
   background-size: cover;

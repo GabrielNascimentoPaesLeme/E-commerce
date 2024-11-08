@@ -61,3 +61,17 @@
 .card-link {
   color: rgb(100, 23, 23);
 }
+
+@media screen and (min-width: 750px){
+  .container-home{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .container-card{
+    max-width: 45%;
+  }
+
+  
+}

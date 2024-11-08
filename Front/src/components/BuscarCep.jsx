@@ -1,5 +1,6 @@
 import { buscaEndereco } from '../services/cep';
 import { useState } from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const BuscarCep = ({ endereco, setEndereco }) => {
   const [erro, setErro] = useState('');
@@ -102,7 +103,7 @@ const BuscarCep = ({ endereco, setEndereco }) => {
           </div>
         )}
 
-        <div className="container-buscador">
+        <Dropdown className="container-buscador">
           <h6>Buscar Endereço</h6>
           <div className="buscadorCep">
             <input
@@ -114,30 +115,41 @@ const BuscarCep = ({ endereco, setEndereco }) => {
               <i className="bi bi-search"></i>
             </button>
           </div>
-          <form
-            onSubmit={(e) => handleCompleteAdress(e)}
-            className="complement"
-          >
-            <div>
-              <label htmlFor="rua">Rua:</label>
-              <input id="rua" type="text" onChange={handleRua} />
-            </div>
+          <div className='toggle-div'>
+            <Dropdown.Toggle className="btn-toggle">
+              Complete o endereço
+            </Dropdown.Toggle>
+          </div>
+          <Dropdown.Menu>
+            <form
+              onSubmit={(e) => handleCompleteAdress(e)}
+              className="complement"
+            >
+              <div>
+                <label htmlFor="rua">Rua:</label>
+                <input id="rua" type="text" onChange={handleRua} />
+              </div>
 
-            <div>
-              <label htmlFor="numero">Número: </label>
-              <input id="numero" type="text" onChange={handleNumberHome} />
-            </div>
+              <div>
+                <label htmlFor="numero">Número: </label>
+                <input id="numero" type="text" onChange={handleNumberHome} />
+              </div>
 
-            <div>
-              <label htmlFor="complemento">Complemento:</label>
-              <input id="complemento" type="text" onChange={handleComplement} />
-            </div>
+              <div>
+                <label htmlFor="complemento">Complemento:</label>
+                <input
+                  id="complemento"
+                  type="text"
+                  onChange={handleComplement}
+                />
+              </div>
 
-            <button type="submit" className="editAdress">
-              Atualizar endereço
-            </button>
-          </form>
-        </div>
+              <button type="submit" className="editAdress">
+                Atualizar endereço
+              </button>
+            </form>
+          </Dropdown.Menu>
+        </Dropdown>
       </address>
     </div>
   );

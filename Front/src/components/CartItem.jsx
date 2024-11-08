@@ -2,7 +2,7 @@ const CartItem = ({ item, quantidade, onAdd, onRemove }) => {
   return (
     <div className="item-cart">
       <div className="descriptionCart">
-        <img src={'#'} className="w-20 h-20 rounded-lg object-cover" />
+        {/* <img src={'#'} className="w-20 h-20 rounded-lg object-cover" /> */}
         <div>
           <h4>{item.name}</h4>
           <h6>R$ {(item.price * quantidade).toFixed(2)}</h6>
